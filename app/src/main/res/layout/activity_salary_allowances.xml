@@ -8,96 +8,120 @@
     android:background="@drawable/background"
     >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:background="@drawable/payroll_background"
-        android:id="@+id/background"
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
         >
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:gravity="center">
 
 
-    <EditText
-        android:id="@+id/allowances_name"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_below="@id/background"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
-        android:background="@color/colorPrimary"
-        android:ems="10"
-        android:hint="Write Your Name"
-        android:inputType="textPersonName"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
-        android:textSize="24sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/payroll_background"
+                android:id="@+id/background"
+                >
+
+            </LinearLayout>
 
 
-    <EditText
-        android:id="@+id/houserent"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_below="@id/allowances_name"
-        android:layout_alignStart="@id/allowances_name"
-        android:layout_alignLeft="@id/allowances_name"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:background="@color/colorPrimary"
-        android:ems="10"
-        android:hint="Write Houserent Allowances"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
-        android:textSize="24sp"
-        android:inputType="number" />
+            <EditText
+                android:id="@+id/allowances_name"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/background"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:background="@color/colorPrimary"
+                android:ems="10"
+                android:hint="Write Your Name"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textSize="24sp" />
 
 
-    <EditText
-        android:id="@+id/medical"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_below="@id/houserent"
-        android:layout_alignStart="@id/houserent"
-        android:layout_alignLeft="@id/houserent"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:background="@color/colorPrimary"
-        android:ems="10"
-        android:hint="Write Medical Allowances"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
-        android:textSize="24sp"
-        android:inputType="number" />
+            <EditText
+                android:id="@+id/houserent"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/allowances_name"
+                android:layout_alignStart="@id/allowances_name"
+                android:layout_alignLeft="@id/allowances_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:background="@color/colorPrimary"
+                android:ems="10"
+                android:hint="Write Houserent Allowances"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:inputType="number" />
 
-    <EditText
-        android:id="@+id/gross_salary"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_below="@id/medical"
-        android:layout_alignStart="@id/medical"
-        android:layout_alignLeft="@id/medical"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:background="@color/colorPrimary"
-        android:ems="10"
-        android:hint="Gross Salary"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
-        android:textSize="24sp"
-        android:inputType="number" />
 
-    <Button
-        android:id="@+id/btn_allowances_save"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/gross_salary"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/button_rectangle_pink"
-        android:text="Save"
-        android:textColor="#ffffff"
-        android:textSize="20sp" />
+            <EditText
+                android:id="@+id/medical"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/houserent"
+                android:layout_alignStart="@id/houserent"
+                android:layout_alignLeft="@id/houserent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:background="@color/colorPrimary"
+                android:ems="10"
+                android:hint="Write Medical Allowances"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/gross_salary"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/medical"
+                android:layout_alignStart="@id/medical"
+                android:layout_alignLeft="@id/medical"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:background="@color/colorPrimary"
+                android:ems="10"
+                android:hint="Gross Salary"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/btn_allowances_save"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gross_salary"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/button_rectangle_pink"
+                android:text="Save"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
 
 </RelativeLayout>
+
