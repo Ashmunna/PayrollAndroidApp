@@ -51,6 +51,16 @@ public class Employee {
     private Object password;
 
 
+    public Employee() {
+    }
+
+    public Employee(String firstName, String email, String designation, Double basicSalary) {
+        this.firstName = firstName;
+        this.email = email;
+        this.designation = designation;
+        this.basicSalary = basicSalary;
+    }
+
     public Integer getId() {
         return id;
     }

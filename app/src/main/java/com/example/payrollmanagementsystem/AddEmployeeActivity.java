@@ -2,11 +2,25 @@ package com.example.payrollmanagementsystem;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.payrollmanagementsystem.connection.RetrofitConnection;
+import com.example.payrollmanagementsystem.model.Employee;
+import com.example.payrollmanagementsystem.service.EmployeeService;
+
+import java.io.IOException;
+
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class AddEmployeeActivity extends AppCompatActivity {
 
@@ -31,23 +45,41 @@ public class AddEmployeeActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-
                 String name = editTextName.getText().toString();
                 String email = editTextEmail.getText().toString();
-                String designation = editTextDesignation.getText().toString();
-                int basicsalary = Integer.parseInt(editTextBasicSalary.getText().toString());
+                final String designation = editTextDesignation.getText().toString();
+                final double basicsalary = Double.parseDouble(editTextBasicSalary.getText().toString());
+                EmployeeService service = RetrofitConnection.getRetrofitInstance().create(EmployeeService.class);
+                Employee newEmployee= new Employee(name,email,designation,basicsalary);
+                Call<Employee> call=service.register(newEmployee);
 
+                    call.enqueue(new Callback<Employee>() {
+                        @SuppressLint("ResourceType")
+                        @Override
+                        public void onResponse(Call<Employee> call, Response<Employee> response) {
+                            Employee s=response.body();
+                            Toast.makeText(getApplicationContext(),"Employee Save successfully",Toast.LENGTH_SHORT).show();
+                            editTextName.getText().clear();
+                            editTextEmail.getText().clear();
+                            editTextDesignation.getText().clear();
+                            editTextBasicSalary.getText().clear();
+                            Log.d(designation,"::fgdfsg:::::::"+s);
 
-                if (name.isEmpty() || email.isEmpty() || designation.isEmpty() || basicsalary<=0) {
-                    String showMessage = "Empty field";
-                    Toast.makeText(getApplicationContext(), showMessage, Toast.LENGTH_LONG).show();
-                } else {
+                        }
 
-                    String showMessage = "Employee name: " + name + "\n Email is : " + email + "\n Designation is : " + designation + "\n Basic Salary is : " + basicsalary;
-                    Toast.makeText(getApplicationContext(),showMessage,Toast.LENGTH_LONG).show();
+                        @Override
+                        public void onFailure(Call<Employee> call, Throwable t) {
+
+                        }
+                    });
+
 
                 }
-            }
+
+
+
+
+
 
         });
     }
