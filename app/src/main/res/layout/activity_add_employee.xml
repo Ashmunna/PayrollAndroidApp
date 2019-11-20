@@ -32,13 +32,37 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal">
+                <EditText
+                    android:layout_width="245dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    android:ems="10"
+                    android:hint="Enter Employee Id"
+                    android:background="@color/colorPrimary"
+                    android:inputType="textPersonName"
+                    android:textStyle="bold" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Search"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    />
+            </LinearLayout>
+
             <EditText
                 android:id="@+id/name"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
                 android:layout_below="@id/background"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="20dp"
                 android:background="@color/colorPrimary"
                 android:ems="10"
                 android:hint="Write Your Name"
@@ -55,7 +79,7 @@
                 android:layout_alignStart="@id/name"
                 android:layout_alignLeft="@id/name"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:background="@color/colorPrimary"
                 android:ems="10"
                 android:hint="Write Your Email"
@@ -72,7 +96,7 @@
                 android:layout_alignStart="@id/email"
                 android:layout_alignLeft="@id/email"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:background="@color/colorPrimary"
                 android:ems="10"
                 android:hint="Write Your Designation"
@@ -91,7 +115,7 @@
                 android:layout_alignStart="@id/designation"
                 android:layout_alignLeft="@id/designation"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:background="@color/colorPrimary"
                 android:ems="10"
                 android:hint="Write Your Basic Salary"
@@ -106,7 +130,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/basicsalary"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/button_rectangle_pink"
                 android:text="Save"
                 android:textColor="#ffffff"
