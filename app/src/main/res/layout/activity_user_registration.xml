@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/payroll_background"
+                android:id="@+id/background"
+                >
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/background"
+                android:layout_marginTop="40dp"
+                android:background="@color/colorPrimary"
+                android:text="User Registration Form"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="36sp" />
+
+
+            <EditText
+                android:id="@+id/user_name"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/textView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:background="@color/colorPrimary"
+                android:ems="10"
+                android:hint="Write Your Name"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/user_email"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/user_name"
+                android:layout_alignStart="@id/user_name"
+                android:layout_alignLeft="@id/user_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:background="@color/colorPrimary"
+                android:ems="10"
+                android:hint="Write Your Email"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/user_username"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/user_email"
+                android:layout_alignStart="@id/user_email"
+                android:layout_alignLeft="@id/user_email"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:background="@color/colorPrimary"
+                android:ems="10"
+                android:hint="Write Your Username"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textSize="24sp" />
+
+
+
+            <EditText
+                android:id="@+id/user_password"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/user_username"
+                android:layout_alignStart="@id/user_username"
+                android:layout_alignLeft="@id/user_username"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:background="@color/colorPrimary"
+                android:ems="10"
+                android:hint="Write Your Password"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/btn_user_save"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_password"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/button_rectangle_pink"
+                android:text="Save"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>
+
