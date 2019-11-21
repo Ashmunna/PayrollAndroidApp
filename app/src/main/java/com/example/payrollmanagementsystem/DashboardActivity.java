@@ -13,6 +13,8 @@ public class DashboardActivity extends AppCompatActivity {
     Button btnShowEmployee;
     Button btnSalaryAllowances;
     Button btnSalaryDeduction;
+    Button btnLogout;
+
 
 
     @Override
@@ -23,6 +25,7 @@ public class DashboardActivity extends AppCompatActivity {
         btnShowEmployee = findViewById(R.id.btn_show_employee);
         btnSalaryAllowances = findViewById(R.id.btn_Salary_Allowances);
         btnSalaryDeduction = findViewById(R.id.btn_Salary_Deduction);
+        btnLogout = findViewById(R.id.btn_logout);
 
 
         btnAddEmp.setOnClickListener(new View.OnClickListener(){
@@ -58,6 +61,15 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),SalaryDeductionActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnLogout.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
                 startActivity(intent);
             }
         });

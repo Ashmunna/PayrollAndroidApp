@@ -40,7 +40,7 @@
                 android:layout_below="@id/background"
                 android:layout_marginTop="40dp"
                 android:background="@color/colorPrimary"
-                android:text="User Registration Form"
+                android:text="Admin Registration Form"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="36sp" />
 
