@@ -26,7 +26,7 @@
                 android:layout_height="200dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="120dp"
                 android:src="@drawable/loginicon" />
 
             <EditText
@@ -35,7 +35,7 @@
                 android:layout_height="50dp"
                 android:layout_below="@id/admin"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="80dp"
                 android:background="@color/colorPrimary"
                 android:drawableLeft="@drawable/ic_action_name"
                 android:ems="10"
@@ -69,22 +69,23 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/password"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="40dp"
                 android:background="@drawable/button_rectangle_pink"
                 android:text="Login"
                 android:textColor="#ffffff"
                 android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/register"
-                android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btn_login"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="40dp"
                 android:text="Register Here"
+                android:background="@drawable/button_rectangle_pink"
                 android:textColor="#ffffff"
-                android:textSize="15sp" />
+                android:textSize="20sp" />
 
 
 
