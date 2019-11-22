@@ -1,6 +1,8 @@
 package com.example.payrollmanagementsystem.service;
 
 import com.example.payrollmanagementsystem.model.Employee;
+import com.example.payrollmanagementsystem.model.EmployeeAllowances;
+import com.example.payrollmanagementsystem.model.EmployeeDeduction;
 
 import java.util.List;
 
@@ -12,6 +14,7 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 
 public interface EmployeeService {
     @GET("/showemp")
@@ -20,5 +23,20 @@ public interface EmployeeService {
     @POST("/createemp")
     Call<Employee> register(
             @Body Employee employee
+    );
+
+    @GET("/showUseradmin/{id}")
+    Call<Employee> showEmpById(@Path("id") long id);
+
+    @POST("/calculatesalary")
+    Call<EmployeeAllowances> saveSalary(
+            @Body EmployeeAllowances employeeAllowances
+    );
+    @GET("/salaryRest/{id}")
+    Call<EmployeeAllowances> showAllowancesById(@Path("id") long id);
+
+    @POST("/calculatesnetalary")
+    Call<EmployeeDeduction> saveNetSalary(
+            @Body EmployeeDeduction employeeDeduction
     );
 }

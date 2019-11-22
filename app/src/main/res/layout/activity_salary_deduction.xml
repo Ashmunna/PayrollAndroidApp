@@ -60,6 +60,7 @@ android:background="@drawable/background"
                 android:textStyle="bold" />
 
             <Button
+                android:id="@+id/btn_Search"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:layout_gravity="right"
