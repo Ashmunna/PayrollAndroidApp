@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/background_images"
     >
 
     <ScrollView
@@ -27,7 +27,7 @@
                 android:layout_height="200dp"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:background="@drawable/payroll_background"
+                android:background="@drawable/images_payroll"
                 android:id="@+id/background"
                 >
 
@@ -39,10 +39,12 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/background"
                 android:layout_marginTop="40dp"
-                android:background="@color/colorPrimary"
+                android:background="@color/cardview_shadow_end_color"
                 android:text="Admin Registration Form"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="36sp" />
+                android:textAllCaps="false"
+                android:textColor="@color/colornew"
+                android:textSize="35sp"
+                android:textStyle="bold" />
 
 
             <EditText
@@ -52,13 +54,15 @@
                 android:layout_below="@id/textView"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="40dp"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorBackground"
+                android:drawableLeft="@drawable/register_name"
                 android:ems="10"
-                android:hint="Write Your Name"
+                android:hint=" Write Your Name"
                 android:inputType="textPersonName"
-                android:textColor="@color/colorPrimaryDark"
-                android:textColorHint="@color/colorPrimaryDark"
-                android:textSize="24sp" />
+                android:textColor="@color/colornew"
+                android:textColorHint="@color/colornew"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/user_email"
@@ -69,13 +73,15 @@
                 android:layout_alignLeft="@id/user_name"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="40dp"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorBackground"
+                android:drawableLeft="@drawable/register_email"
                 android:ems="10"
-                android:hint="Write Your Email"
+                android:hint=" Write Your Email"
                 android:inputType="textPersonName"
-                android:textColor="@color/colorPrimaryDark"
-                android:textColorHint="@color/colorPrimaryDark"
-                android:textSize="24sp" />
+                android:textColor="@color/colornew"
+                android:textColorHint="@color/colornew"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/user_username"
@@ -86,14 +92,15 @@
                 android:layout_alignLeft="@id/user_email"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="40dp"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorBackground"
+                android:drawableLeft="@drawable/login_icon"
                 android:ems="10"
-                android:hint="Write Your Username"
+                android:hint=" Write Your Username"
                 android:inputType="textPersonName"
-                android:textColor="@color/colorPrimaryDark"
-                android:textColorHint="@color/colorPrimaryDark"
-                android:textSize="24sp" />
-
+                android:textColor="@color/colornew"
+                android:textColorHint="@color/colornew"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
 
             <EditText
@@ -105,13 +112,15 @@
                 android:layout_alignLeft="@id/user_username"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="40dp"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorBackground"
+                android:drawableLeft="@drawable/ic_password_name"
                 android:ems="10"
-                android:hint="Write Your Password"
-                android:textColor="@color/colorPrimaryDark"
-                android:textColorHint="@color/colorPrimaryDark"
+                android:hint=" Write Your Password"
+                android:inputType="textPassword"
+                android:textColor="@color/colornew"
+                android:textColorHint="@color/colornew"
                 android:textSize="24sp"
-                android:inputType="textPassword" />
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btn_user_save"

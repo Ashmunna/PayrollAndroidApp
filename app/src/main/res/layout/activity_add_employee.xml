@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/background_images"
     >
 
     <ScrollView
@@ -26,12 +26,26 @@
                 android:layout_height="200dp"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:background="@drawable/payroll_background"
+                android:background="@drawable/payroll_emp_reg_background"
                 android:id="@+id/background"
                 >
 
             </LinearLayout>
 
+
+
+            <TextView
+                android:id="@+id/add_emp_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/background"
+                android:layout_marginTop="40dp"
+                android:background="@color/cardview_shadow_end_color"
+                android:text="Employee Registration Form"
+                android:textAllCaps="false"
+                android:textColor="@color/colornew"
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
 
             <EditText
@@ -40,14 +54,16 @@
                 android:layout_height="50dp"
                 android:layout_below="@id/background"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
-                android:background="@color/colorPrimary"
+                android:layout_marginTop="40dp"
+                android:background="@color/colorBackground"
+                android:drawableLeft="@drawable/register_name"
                 android:ems="10"
-                android:hint="Write Your Name"
+                android:hint=" Write Your Name"
                 android:inputType="textPersonName"
-                android:textColor="@color/colorPrimaryDark"
-                android:textColorHint="@color/colorPrimaryDark"
-                android:textSize="24sp" />
+                android:textColor="@color/colornew"
+                android:textColorHint="@color/colornew"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/email"
@@ -57,14 +73,16 @@
                 android:layout_alignStart="@id/name"
                 android:layout_alignLeft="@id/name"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
-                android:background="@color/colorPrimary"
+                android:layout_marginTop="40dp"
+                android:background="@color/colorBackground"
+                android:drawableLeft="@drawable/register_email"
                 android:ems="10"
-                android:hint="Write Your Email"
+                android:hint=" Write Your Email"
                 android:inputType="textEmailAddress"
-                android:textColor="@color/colorPrimaryDark"
-                android:textColorHint="@color/colorPrimaryDark"
-                android:textSize="24sp" />
+                android:textColor="@color/colornew"
+                android:textColorHint="@color/colornew"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/designation"
@@ -74,15 +92,16 @@
                 android:layout_alignStart="@id/email"
                 android:layout_alignLeft="@id/email"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
-                android:background="@color/colorPrimary"
+                android:layout_marginTop="40dp"
+                android:background="@color/colorBackground"
                 android:ems="10"
-                android:hint="Write Your Designation"
+                android:hint=" Write Your Designation"
+                android:drawableLeft="@drawable/register_designation"
                 android:inputType="textPersonName"
-                android:textColor="@color/colorPrimaryDark"
-                android:textColorHint="@color/colorPrimaryDark"
-                android:textSize="24sp" />
-
+                android:textColor="@color/colornew"
+                android:textColorHint="@color/colornew"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
 
             <EditText
@@ -93,14 +112,16 @@
                 android:layout_alignStart="@id/designation"
                 android:layout_alignLeft="@id/designation"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
-                android:background="@color/colorPrimary"
+                android:layout_marginTop="40dp"
+                android:background="@color/colorBackground"
+                android:drawableLeft="@drawable/register_salary"
                 android:ems="10"
                 android:hint="Write Your Basic Salary"
-                android:textColor="@color/colorPrimaryDark"
-                android:textColorHint="@color/colorPrimaryDark"
+                android:inputType="number"
+                android:textColor="@color/colornew"
+                android:textColorHint="@color/colornew"
                 android:textSize="24sp"
-                android:inputType="number" />
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btn_employee_save"
@@ -108,7 +129,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/basicsalary"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="40dp"
                 android:background="@drawable/button_rectangle_pink"
                 android:text="Save"
                 android:textColor="#ffffff"

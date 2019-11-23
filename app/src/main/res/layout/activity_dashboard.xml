@@ -25,74 +25,59 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="230dp"
-                    android:orientation="vertical"
+                    android:background="@drawable/register_payroll_background"
                     android:gravity="center"
-                    android:background="@drawable/payroll_background"
-                    >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="188dp"
-                        android:text="Jarvis Payroll Management System"
-                        android:textColor="@color/colornew"
-                        android:textSize="20sp"
-                        android:textStyle="bold"></TextView>
+                    android:orientation="vertical">
 
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="215dp"
+                    android:layout_width="402dp"
+                    android:layout_height="662dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="215dp"
                     android:layout_marginRight="10dp"
-                    >
+                    android:background="@drawable/background_images"
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="135dp"
-                        android:orientation="horizontal"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="10dp"
-                        >
+                        android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:layout_marginLeft="5dp"
                             android:orientation="vertical">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                >
+                                android:layout_height="match_parent">
 
                                 <ImageView
+                                    android:id="@+id/add_emp"
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
-                                    android:id="@+id/add_emp"
-                                    android:src="@drawable/employees"
                                     android:layout_centerInParent="true"
-                                    />
+                                    android:src="@drawable/employees" />
 
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Employee Registration"
-                                    android:textStyle="bold"
-                                    android:textSize="15dp"
                                     android:layout_below="@+id/add_emp"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginBottom="10dp"
-                                    />
+                                    android:text="Employee Registration"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
 
                                 <Button
                                     android:id="@+id/btn_add_emp"
@@ -103,91 +88,87 @@
                             </RelativeLayout>
 
                         </androidx.cardview.widget.CardView>
+
                         <androidx.cardview.widget.CardView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:layout_marginLeft="5dp"
                             android:orientation="vertical">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                >
+                                android:layout_height="match_parent">
 
                                 <ImageView
+                                    android:id="@+id/show_employee"
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
-                                    android:id="@+id/show_employee"
-                                    android:src="@drawable/logout_showemployee"
                                     android:layout_centerInParent="true"
-                                    />
+                                    android:src="@drawable/logout_showemployee" />
 
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Show Employee"
-                                    android:textStyle="bold"
-                                    android:textSize="15dp"
                                     android:layout_below="@+id/show_employee"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginBottom="10dp"
-                                    />
+                                    android:text="Show Employee"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
                                 <Button
+                                    android:id="@+id/btn_show_employee"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:id="@+id/btn_show_employee"
-                                    android:background="@android:color/transparent"/>
+                                    android:background="@android:color/transparent" />
 
                             </RelativeLayout>
 
                         </androidx.cardview.widget.CardView>
 
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="135dp"
-                        android:orientation="horizontal"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="10dp"
-                        >
+                        android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:layout_marginLeft="5dp"
                             android:orientation="vertical">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                >
+                                android:layout_height="match_parent">
 
                                 <ImageView
+                                    android:id="@+id/Salary_Allowances"
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
-                                    android:id="@+id/Salary_Allowances"
-                                    android:src="@drawable/logout_allowances"
                                     android:layout_centerInParent="true"
-                                    />
+                                    android:src="@drawable/logout_allowances" />
 
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Salary Allowances"
-                                    android:textStyle="bold"
-                                    android:textSize="15dp"
                                     android:layout_below="@+id/Salary_Allowances"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginBottom="10dp"
-                                    />
+                                    android:text="Salary Allowances"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
 
                                 <Button
                                     android:id="@+id/btn_Salary_Allowances"
@@ -198,94 +179,90 @@
                             </RelativeLayout>
 
                         </androidx.cardview.widget.CardView>
+
                         <androidx.cardview.widget.CardView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:layout_marginLeft="5dp"
                             android:orientation="vertical">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                >
+                                android:layout_height="match_parent">
 
                                 <ImageView
+                                    android:id="@+id/Salary_Deduction"
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
-                                    android:id="@+id/Salary_Deduction"
-                                    android:src="@drawable/logout_salarydeduction"
                                     android:layout_centerInParent="true"
-                                    />
+                                    android:src="@drawable/logout_salarydeduction" />
 
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Salary Deduction"
-                                    android:textStyle="bold"
-                                    android:textSize="15dp"
                                     android:layout_below="@+id/Salary_Deduction"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginBottom="10dp"
-                                    />
+                                    android:text="Salary Deduction"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
                                 <Button
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
                                     android:id="@+id/btn_Salary_Deduction"
-                                    android:background="@android:color/transparent"/>
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent" />
 
                             </RelativeLayout>
 
                         </androidx.cardview.widget.CardView>
 
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="135dp"
-                        android:orientation="horizontal"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="10dp"
-                        >
+                        android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:layout_marginLeft="5dp"
                             android:orientation="vertical">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                >
+                                android:layout_height="match_parent">
 
                                 <ImageView
+                                    android:id="@+id/salary_sheet"
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
-                                    android:id="@+id/imageView7"
-                                    android:src="@drawable/logout_salarysheet"
                                     android:layout_centerInParent="true"
-                                    />
+                                    android:src="@drawable/logout_salarysheet" />
 
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_below="@+id/salary_sheet"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
                                     android:text="Salary Sheet"
-                                    android:textStyle="bold"
                                     android:textSize="15dp"
-                                    android:layout_below="@+id/imageView7"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_marginTop="10dp"
-                                    android:layout_marginBottom="10dp"
-                                    />
+                                    android:textStyle="bold" />
 
                                 <Button
-                                    android:id="@+id/buttonCustomerList"
+                                    android:id="@+id/btn_salary_sheet"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@android:color/transparent" />
@@ -293,94 +270,90 @@
                             </RelativeLayout>
 
                         </androidx.cardview.widget.CardView>
+
                         <androidx.cardview.widget.CardView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:layout_marginLeft="5dp"
                             android:orientation="vertical">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                >
+                                android:layout_height="match_parent">
 
                                 <ImageView
+                                    android:id="@+id/salary_reports"
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
-                                    android:id="@+id/imageView8"
-                                    android:src="@drawable/logout_reports"
                                     android:layout_centerInParent="true"
-                                    />
+                                    android:src="@drawable/logout_reports" />
 
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Salary Reports"
-                                    android:textStyle="bold"
-                                    android:textSize="15dp"
-                                    android:layout_below="@+id/imageView8"
+                                    android:layout_below="@+id/salary_reports"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginBottom="10dp"
-                                    />
+                                    android:text="Salary Reports"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
                                 <Button
+                                    android:id="@+id/btn_salary_reports"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:id="@+id/buttonStatement"
-                                    android:background="@android:color/transparent"/>
+                                    android:background="@android:color/transparent" />
 
                             </RelativeLayout>
 
                         </androidx.cardview.widget.CardView>
 
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="135dp"
-                        android:orientation="horizontal"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="10dp"
-                        >
+                        android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:layout_marginLeft="5dp"
                             android:orientation="vertical">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                >
+                                android:layout_height="match_parent">
 
                                 <ImageView
+                                    android:id="@+id/salary_payment"
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
-                                    android:id="@+id/imageView5"
-                                    android:src="@drawable/logout_salarypayment"
                                     android:layout_centerInParent="true"
-                                    />
+                                    android:src="@drawable/logout_salarypayment" />
 
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Salary Payment"
-                                    android:textStyle="bold"
-                                    android:textSize="15dp"
-                                    android:layout_below="@+id/imageView5"
+                                    android:layout_below="@+id/salary_payment"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginBottom="10dp"
-                                    />
+                                    android:text="Salary Payment"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
 
                                 <Button
-                                    android:id="@+id/btn_payment"
+                                    android:id="@+id/btn_salary_payment"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@android:color/transparent" />
@@ -388,44 +361,43 @@
                             </RelativeLayout>
 
                         </androidx.cardview.widget.CardView>
+
                         <androidx.cardview.widget.CardView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:layout_marginLeft="5dp"
                             android:orientation="vertical">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                >
+                                android:layout_height="match_parent">
 
                                 <ImageView
+                                    android:id="@+id/imageView6"
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
-                                    android:id="@+id/imageView6"
-                                    android:src="@drawable/logout"
                                     android:layout_centerInParent="true"
-                                    />
+                                    android:src="@drawable/logout" />
 
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Logout"
-                                    android:textStyle="bold"
-                                    android:textSize="15dp"
                                     android:layout_below="@+id/imageView6"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginBottom="10dp"
-                                    />
+                                    android:text="Logout"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
                                 <Button
+                                    android:id="@+id/btn_logout"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:id="@+id/btn_logout"
-                                    android:background="@android:color/transparent"/>
+                                    android:background="@android:color/transparent" />
 
                             </RelativeLayout>
 

@@ -29,21 +29,26 @@
                 android:layout_marginTop="120dp"
                 android:src="@drawable/loginicon" />
 
-            <EditText
-                android:id="@+id/username"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:layout_below="@id/admin"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="80dp"
-                android:background="@color/colorPrimary"
-                android:drawableLeft="@drawable/ic_action_name"
-                android:ems="10"
-                android:hint="Write Your Username"
-                android:inputType="textPersonName"
-                android:textColor="@color/colorPrimaryDark"
-                android:textColorHint="@color/colorPrimaryDark"
-                android:textSize="24sp" />
+
+
+
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/admin"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="80dp"
+                    android:background="@color/colorBackground"
+                    android:drawableLeft="@drawable/login_icon"
+                    android:ems="10"
+                    android:hint=" Write Your Username"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/colornew"
+                    android:textColorHint="@color/colornew"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
 
             <EditText
                 android:id="@+id/password"
@@ -54,14 +59,18 @@
                 android:layout_alignLeft="@id/username"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="35dp"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorBackground"
                 android:drawableLeft="@drawable/ic_password_name"
                 android:ems="10"
-                android:hint="Write Your Password"
+                android:hint=" Write Your Password"
                 android:inputType="textPassword"
-                android:textColor="@color/colorPrimaryDark"
-                android:textColorHint="@color/colorPrimaryDark"
-                android:textSize="24sp" />
+                android:textColor="@color/colornew"
+                android:textColorHint="@color/colornew"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+
 
             <Button
                 android:id="@+id/btn_login"
@@ -70,10 +79,11 @@
                 android:layout_below="@id/password"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="40dp"
-                android:background="@drawable/button_rectangle_pink"
+                android:background="@drawable/btn_reactangle"
                 android:text="Login"
-                android:textColor="#ffffff"
-                android:textSize="20sp" />
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btn_register"
@@ -82,10 +92,11 @@
                 android:layout_below="@id/btn_login"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="40dp"
-                android:text="Register Here"
                 android:background="@drawable/button_rectangle_pink"
-                android:textColor="#ffffff"
-                android:textSize="20sp" />
+                android:text="Register Here"
+                android:textColor="@color/colornew"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
 
 

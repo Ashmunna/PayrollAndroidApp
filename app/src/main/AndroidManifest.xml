@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UserRegistrationActivity"></activity>
+        <activity android:name=".SalaryPaymentActivity"></activity>
+        <activity android:name=".SalaryReportsActivity" />
+        <activity android:name=".SalarySheetActivity" />
+        <activity android:name=".UserRegistrationActivity" />
         <activity android:name=".ShowEmployeeActivity" />
         <activity android:name=".ListActivity" />
         <activity android:name=".SalaryDeductionActivity" />

@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/background_images"
     >
 
     <ScrollView
@@ -28,7 +28,7 @@
                 android:id="@+id/background"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:background="@drawable/payroll_background"
+                android:background="@drawable/salary_allowances"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -51,13 +51,13 @@
                     android:layout_alignLeft="@id/background"
                     android:layout_centerHorizontal="true"
                     android:layout_marginLeft="15dp"
-                    android:background="@color/colorPrimary"
+                    android:background="@color/colorBackground"
                     android:ems="10"
                     android:hint="Enter Employee Id"
                     android:inputType="textPersonName"
                     android:textAlignment="center"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textColorHint="@color/colorPrimaryDark"
+                    android:textColor="@color/colornew"
+                    android:textColorHint="@color/colornew"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -81,13 +81,14 @@
                 android:layout_below="@id/allowances_search"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="40dp"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorBackground"
                 android:ems="10"
-                android:hint="Write Your Name"
+                android:hint=" Write Your Name"
                 android:inputType="textPersonName"
-                android:textColor="@color/colorPrimaryDark"
-                android:textColorHint="@color/colorPrimaryDark"
-                android:textSize="24sp" />
+                android:textColor="@color/colornew"
+                android:textColorHint="@color/colornew"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/basicsalary"
@@ -98,13 +99,14 @@
                 android:layout_alignLeft="@id/allowances_name"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorBackground"
                 android:ems="10"
-                android:hint="Write Your Basic Salary"
-                android:textColor="@color/colorPrimaryDark"
-                android:textColorHint="@color/colorPrimaryDark"
+                android:hint=" Write Your Basic Salary"
+                android:textColor="@color/colornew"
+                android:textColorHint="@color/colornew"
                 android:textSize="24sp"
-                android:inputType="number" />
+                android:inputType="number"
+                android:textStyle="bold"/>
 
 
             <EditText
@@ -116,13 +118,14 @@
                 android:layout_alignLeft="@id/allowances_name"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorBackground"
                 android:ems="10"
-                android:hint="Write Houserent Allowances"
+                android:hint=" Write Houserent Allowances"
                 android:inputType="number"
-                android:textColor="@color/colorPrimaryDark"
-                android:textColorHint="@color/colorPrimaryDark"
-                android:textSize="24sp" />
+                android:textColor="@color/colornew"
+                android:textColorHint="@color/colornew"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
 
 
             <EditText
@@ -134,25 +137,15 @@
                 android:layout_alignLeft="@id/houserent"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorBackground"
                 android:ems="10"
-                android:hint="Write Medical Allowances"
+                android:hint=" Write Medical Allowances"
                 android:inputType="number"
-                android:textColor="@color/colorPrimaryDark"
-                android:textColorHint="@color/colorPrimaryDark"
-                android:textSize="24sp" />
+                android:textColor="@color/colornew"
+                android:textColorHint="@color/colornew"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
 
-            <Button
-                android:id="@+id/btn_calculate"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/medical"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/button_rectangle_pink"
-                android:text="Calculate"
-                android:textColor="#ffffff"
-                android:textSize="15sp" />
 
             <EditText
                 android:id="@+id/gross_salary"
@@ -163,13 +156,14 @@
                 android:layout_alignLeft="@id/medical"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="40dp"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorBackground"
                 android:ems="10"
-                android:hint="Gross Salary"
+                android:hint=" Gross Salary"
                 android:inputType="number"
-                android:textColor="@color/colorPrimaryDark"
-                android:textColorHint="@color/colorPrimaryDark"
-                android:textSize="24sp" />
+                android:textColor="@color/colornew"
+                android:textColorHint="@color/colornew"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
 
             <Button
                 android:id="@+id/btn_allowances_save"
@@ -177,7 +171,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/gross_salary"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="30dp"
                 android:background="@drawable/button_rectangle_pink"
                 android:text="Save"
                 android:textColor="#ffffff"
