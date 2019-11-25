@@ -2,10 +2,14 @@ package com.example.payrollmanagementsystem;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.payrollmanagementsystem.adapter.EmployeeAdapter;
 import com.example.payrollmanagementsystem.connection.RetrofitConnection;
@@ -47,6 +51,19 @@ public class ShowEmployeeActivity extends AppCompatActivity {
                 employeeAdapter= new EmployeeAdapter(ShowEmployeeActivity.this,employee);
                 employeeLv.setAdapter(employeeAdapter);
                 Log.e(TAG, ":::::::::"+employee.size());
+
+                employeeLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        Intent intent  =new Intent(ShowEmployeeActivity.this,EmployeeDetails.class);
+                        intent.putExtra("eName",employee.get(position).getFirstName());
+
+                        startActivity(intent);
+
+                    }
+                });
+
+
             }
 
             @Override
