@@ -32,12 +32,15 @@ public class EmployeeAdapter extends ArrayAdapter<Employee> {
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         convertView = layoutInflater.inflate(R.layout.employee_layout, parent, false);
 
+        TextView empID = convertView.findViewById(R.id.empID);
         TextView firstName = convertView.findViewById(R.id.firstName);
         TextView designation = convertView.findViewById(R.id.designation);
-        TextView basicSalary = convertView.findViewById(R.id.basicSalary);
+//        TextView basicSalary = convertView.findViewById(R.id.basicSalary);
+
+        empID.setText(String.valueOf(employee.get(position).getId()));
         firstName.setText(employee.get(position).getFirstName());
         designation.setText(employee.get(position).getDesignation());
-        basicSalary.setText(String.valueOf(employee.get(position).getBasicSalary()));
+//        basicSalary.setText(String.valueOf(employee.get(position).getBasicSalary()));
         return convertView;
     }
 }

@@ -56,6 +56,8 @@ public class ShowEmployeeActivity extends AppCompatActivity {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         Intent intent  =new Intent(ShowEmployeeActivity.this,EmployeeDetails.class);
+                        String emp_id = String.valueOf(employee.get(position).getId());
+                        intent.putExtra("eId", emp_id);
                         intent.putExtra("eName",employee.get(position).getFirstName());
 
                         startActivity(intent);

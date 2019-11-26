@@ -49,7 +49,7 @@ android:background="@drawable/background_images"
         <ListView
             android:id="@+id/employeeLv"
             android:layout_width="match_parent"
-            android:layout_height="455dp"
+            android:layout_height="400dp"
             android:layout_marginTop="40dp"
 
             app:layout_constraintBottom_toBottomOf="parent"
