@@ -56,9 +56,9 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginRight="20dp"
                 android:background="@color/colorBackground"
-                android:drawableLeft="@drawable/register_search"
                 android:hint=" Enter Employee Id"
                 android:textColor="@color/colornew"
+                android:completionThreshold="1"
                 android:textColorHint="@color/colornew"
                 android:textSize="24sp"
                 android:textStyle="bold" />

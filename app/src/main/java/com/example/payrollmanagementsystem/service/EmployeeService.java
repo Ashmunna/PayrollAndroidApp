@@ -44,7 +44,8 @@ public interface EmployeeService {
     Call<UserInfo> registerUser(
             @Body UserInfo UserInfo
     );
-
+    @GET("/showe")
+    Call<List<EmployeeDeduction>> showId();
 
 
 }
