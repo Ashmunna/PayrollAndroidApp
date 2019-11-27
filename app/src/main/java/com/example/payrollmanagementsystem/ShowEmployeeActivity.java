@@ -55,10 +55,22 @@ public class ShowEmployeeActivity extends AppCompatActivity {
                 employeeLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        Intent intent  =new Intent(ShowEmployeeActivity.this,EmployeeDetails.class);
+                        Intent intent  = new Intent(ShowEmployeeActivity.this,EmployeeDetails.class);
                         String emp_id = String.valueOf(employee.get(position).getId());
+                        String b_salary = String.valueOf(employee.get(position).getBasicSalary());
                         intent.putExtra("eId", emp_id);
                         intent.putExtra("eName",employee.get(position).getFirstName());
+                        intent.putExtra("eSurName",employee.get(position).getSurname());
+                        intent.putExtra("eDob",employee.get(position).getDob());
+                        intent.putExtra("eGender",employee.get(position).getGender());
+                        intent.putExtra("eMail",employee.get(position).getEmail());
+                        intent.putExtra("eContact",employee.get(position).getContactNo());
+                        intent.putExtra("eAddress",employee.get(position).getAddress());
+                        intent.putExtra("eDepartment",employee.get(position).getDepartment());
+                        intent.putExtra("eDesignation",employee.get(position).getDesignation());
+                        intent.putExtra("eStatus",employee.get(position).getStatus());
+                        intent.putExtra("eDoh",employee.get(position).getDoh());
+                        intent.putExtra("eBasicSalary", b_salary);
 
                         startActivity(intent);
 

@@ -35,7 +35,7 @@ public class EmployeeAdapter extends ArrayAdapter<Employee> {
         TextView empID = convertView.findViewById(R.id.empID);
         TextView firstName = convertView.findViewById(R.id.firstName);
         TextView designation = convertView.findViewById(R.id.designation);
-//        TextView basicSalary = convertView.findViewById(R.id.basicSalary);
+        TextView details = convertView.findViewById(R.id.workqualitycmnt);
 
         empID.setText(String.valueOf(employee.get(position).getId()));
         firstName.setText(employee.get(position).getFirstName());
