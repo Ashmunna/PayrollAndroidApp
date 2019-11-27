@@ -3,6 +3,7 @@ package com.example.payrollmanagementsystem.service;
 import com.example.payrollmanagementsystem.model.Employee;
 import com.example.payrollmanagementsystem.model.EmployeeAllowances;
 import com.example.payrollmanagementsystem.model.EmployeeDeduction;
+import com.example.payrollmanagementsystem.model.UserInfo;
 
 import java.util.List;
 
@@ -39,4 +40,11 @@ public interface EmployeeService {
     Call<EmployeeDeduction> saveNetSalary(
             @Body EmployeeDeduction employeeDeduction
     );
+    @POST("/register")
+    Call<UserInfo> registerUser(
+            @Body UserInfo UserInfo
+    );
+
+
+
 }
