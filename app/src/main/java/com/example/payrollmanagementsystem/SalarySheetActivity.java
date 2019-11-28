@@ -56,7 +56,7 @@ public class SalarySheetActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<EmployeeDeduction>> call, Throwable t) {
-
+                Log.e(TAG, "Received an exception " + empId.size() );
             }
         });
         autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
