@@ -60,7 +60,7 @@ public class SalaryAllowancesActivity extends AppCompatActivity {
 
                 service = RetrofitConnection.getRetrofitInstance().create(EmployeeService.class);
 
-                final Call<List<Employee>> call2=service.showEmp();
+                 Call<List<Employee>> call2=service.showEmp();
                 call2.enqueue(new Callback<List<Employee>>() {
                     @Override
                     public void onResponse(Call<List<Employee>> call, Response<List<Employee>> response) {
@@ -70,7 +70,9 @@ public class SalaryAllowancesActivity extends AppCompatActivity {
                         Log.e(TAG, "Received an exception " + employeeId.size() );
                         for (int i=0; i<employeeId.size(); i++){
                             empid[i]=String.valueOf(employeeId.get(i).getId());
+
                         }
+
                         adapterId=new ArrayAdapter<String>(SalaryAllowancesActivity.this,android.R.layout.simple_list_item_1,empid);
                         autoCompleteTextView.setAdapter(adapterId);
 

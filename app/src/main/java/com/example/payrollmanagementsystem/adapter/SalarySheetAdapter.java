@@ -40,7 +40,7 @@ public class SalarySheetAdapter extends ArrayAdapter<EmployeeDeduction> {
 
         empID.setText(String.valueOf(salarySheet.get(position).getId()));
         firstName.setText(salarySheet.get(position).getFirstName());
-        designation.setText(salarySheet.get(position).getDesignation());
+        designation.setText(String.valueOf(salarySheet.get(position).getNetpay()));
 //        basicSalary.setText(String.valueOf(employee.get(position).getBasicSalary()));
         return convertView;
     }

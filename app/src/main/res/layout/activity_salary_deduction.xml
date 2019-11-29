@@ -40,24 +40,20 @@ android:background="@drawable/background_images"
             android:gravity="center"
             android:orientation="horizontal">
 
-            <EditText
+            <AutoCompleteTextView
                 android:id="@+id/deduction_search"
-                android:layout_width="185dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_below="@id/background"
-                android:layout_alignStart="@id/background"
-                android:layout_alignLeft="@id/background"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="20dp"
                 android:background="@color/colorBackground"
-                android:ems="10"
-                android:hint="Enter Employee Id"
-                android:inputType="textPersonName"
-                android:textAlignment="center"
+                android:completionThreshold="1"
+                android:hint=" Enter Employee Id"
                 android:textColor="@color/colornew"
                 android:textColorHint="@color/colornew"
-                android:textSize="20sp"
+                android:textSize="24sp"
                 android:textStyle="bold" />
+
 
             <Button
                 android:id="@+id/btn_Search"

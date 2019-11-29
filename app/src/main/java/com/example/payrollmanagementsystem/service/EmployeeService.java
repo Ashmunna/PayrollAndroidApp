@@ -46,6 +46,10 @@ public interface EmployeeService {
     );
     @GET("/showe")
     Call<List<EmployeeDeduction>> showId();
+    @GET("/showe-salarry-sheet")
+    Call<List<EmployeeDeduction>> showSalarySheet();
 
+    @GET("/showeid")
+    Call<List<EmployeeAllowances>> showAllowancesId();
 
 }
