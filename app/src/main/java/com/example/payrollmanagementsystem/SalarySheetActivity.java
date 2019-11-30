@@ -46,7 +46,7 @@ public class SalarySheetActivity extends AppCompatActivity {
 
         EmployeeService service = RetrofitConnection.getRetrofitInstance().create(EmployeeService.class);
 
-        Call<List<EmployeeDeduction>> call2=service.showSalarySheet();
+        Call<List<EmployeeDeduction>> call2=service.showId();
 
         call2.enqueue(new Callback<List<EmployeeDeduction>>() {
             @Override

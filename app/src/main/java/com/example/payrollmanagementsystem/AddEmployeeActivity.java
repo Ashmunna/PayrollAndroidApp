@@ -16,6 +16,7 @@ import com.example.payrollmanagementsystem.model.Employee;
 import com.example.payrollmanagementsystem.service.EmployeeService;
 
 import java.io.IOException;
+import java.util.Date;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -47,14 +48,19 @@ public class AddEmployeeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String name = editTextName.getText().toString();
                 String email = editTextEmail.getText().toString();
+
+
                 final String designation = editTextDesignation.getText().toString();
                 final double basicsalary = Double.parseDouble(editTextBasicSalary.getText().toString());
                 EmployeeService service = RetrofitConnection.getRetrofitInstance().create(EmployeeService.class);
-                Employee newEmployee= new Employee(name,email,designation,basicsalary);
+                Employee newEmployee= new Employee();
+                newEmployee.setFirstName(name);
+                newEmployee.setJoingDate(new Date());
+
                 Call<Employee> call=service.register(newEmployee);
 
                     call.enqueue(new Callback<Employee>() {
-                        @SuppressLint("ResourceType")
+
                         @Override
                         public void onResponse(Call<Employee> call, Response<Employee> response) {
                             Employee s=response.body();

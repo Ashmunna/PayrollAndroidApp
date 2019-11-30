@@ -49,6 +49,9 @@ public class Employee {
     @SerializedName("password")
     @Expose
     private Object password;
+    @SerializedName("joingDate")
+    @Expose
+    private Object joingDate;
 
 
     public Employee() {
@@ -181,4 +184,11 @@ public class Employee {
         this.password = password;
     }
 
+    public Object getJoingDate() {
+        return joingDate;
+    }
+
+    public void setJoingDate(Object joingDate) {
+        this.joingDate = joingDate;
+    }
 }
