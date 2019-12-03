@@ -23,47 +23,34 @@ android:background="@drawable/background_images"
 
 
         <LinearLayout
+            android:id="@+id/background"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:orientation="vertical"
-            android:gravity="center"
             android:background="@drawable/payroll_background"
-            android:id="@+id/background"
-            >
+            android:gravity="center"
+            android:orientation="vertical">
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:gravity="center"
             android:orientation="horizontal">
 
             <AutoCompleteTextView
                 android:id="@+id/deduction_search"
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="100dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="58dp"
+                android:layout_marginRight="50dp"
                 android:background="@color/colorBackground"
                 android:completionThreshold="1"
                 android:hint=" Enter Employee Id"
                 android:textColor="@color/colornew"
                 android:textColorHint="@color/colornew"
                 android:textSize="24sp"
-                android:textStyle="bold" />
-
-
-            <Button
-                android:id="@+id/btn_Search"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:layout_gravity="right"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="18dp"
-                android:text="Search"
-                android:textSize="18sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -75,7 +62,7 @@ android:background="@drawable/background_images"
             android:layout_height="50dp"
             android:layout_below="@id/background"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="30dp"
             android:background="@color/colorBackground"
             android:ems="10"
             android:hint="Write Your Name"
@@ -83,6 +70,59 @@ android:background="@drawable/background_images"
             android:textColor="@color/colornew"
             android:textColorHint="@color/colornew"
             android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/gross_SAlary"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/background"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorBackground"
+            android:ems="10"
+            android:hint="Write Your Gross Salary"
+            android:inputType="number"
+            android:textColor="@color/colornew"
+            android:textColorHint="@color/colornew"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+
+        <EditText
+            android:id="@+id/advance"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/deduction_name"
+            android:layout_alignStart="@id/deduction_name"
+            android:layout_alignLeft="@id/deduction_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorBackground"
+            android:ems="10"
+            android:hint="Write Advance Deduction"
+            android:textColor="@color/colornew"
+            android:textColorHint="@color/colornew"
+            android:textSize="24sp"
+            android:inputType="number"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/provident"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/tax"
+            android:layout_alignStart="@id/tax"
+            android:layout_alignLeft="@id/tax"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorBackground"
+            android:ems="10"
+            android:hint="Write Provident Deduction"
+            android:textColor="@color/colornew"
+            android:textColorHint="@color/colornew"
+            android:textSize="24sp"
+            android:inputType="number"
             android:textStyle="bold"/>
 
 
@@ -94,7 +134,7 @@ android:background="@drawable/background_images"
             android:layout_alignStart="@id/deduction_name"
             android:layout_alignLeft="@id/deduction_name"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:background="@color/colorBackground"
             android:ems="10"
             android:hint="Write Tax Deduction"
@@ -106,17 +146,35 @@ android:background="@drawable/background_images"
 
 
         <EditText
-            android:id="@+id/provident"
+            android:id="@+id/lifeinsurance"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_below="@id/tax"
             android:layout_alignStart="@id/tax"
             android:layout_alignLeft="@id/tax"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:background="@color/colorBackground"
             android:ems="10"
-            android:hint="Write Provident Deduction"
+            android:hint="Write Insurance Deduction"
+            android:textColor="@color/colornew"
+            android:textColorHint="@color/colornew"
+            android:textSize="24sp"
+            android:inputType="number"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/other"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/tax"
+            android:layout_alignStart="@id/tax"
+            android:layout_alignLeft="@id/tax"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorBackground"
+            android:ems="10"
+            android:hint="Write Other Deduction"
             android:textColor="@color/colornew"
             android:textColorHint="@color/colornew"
             android:textSize="24sp"
@@ -131,7 +189,7 @@ android:background="@drawable/background_images"
             android:layout_alignStart="@id/provident"
             android:layout_alignLeft="@id/provident"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:background="@color/colorBackground"
             android:ems="10"
             android:hint="Net Salary"

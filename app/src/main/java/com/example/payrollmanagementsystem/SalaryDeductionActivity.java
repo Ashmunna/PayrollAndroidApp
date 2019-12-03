@@ -28,8 +28,12 @@ import java.util.List;
 public class SalaryDeductionActivity extends AppCompatActivity {
     AutoCompleteTextView autoCompleteTextView;
     EditText editTextDeductionName;
-    EditText editTextTax;
+    EditText editTextGrossSalary;
+    EditText editTextAdvance;
     EditText editTextProvident;
+    EditText editTextTax;
+    EditText editTextInsurance;
+    EditText editTextOther;
     EditText editTextNetPay;
     EditText editTextDeduction_search;
     Button btnEmployeeDeductionSave;
@@ -46,11 +50,16 @@ public class SalaryDeductionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_salary_deduction);
         autoCompleteTextView=findViewById(R.id.deduction_search);
         editTextDeductionName = findViewById(R.id.deduction_name);
-        editTextTax = findViewById(R.id.tax);
+        editTextGrossSalary = findViewById(R.id.gross_SAlary);
+        editTextAdvance = findViewById(R.id.advance);
         editTextProvident = findViewById(R.id.provident);
+        editTextTax = findViewById(R.id.tax);
+        editTextInsurance = findViewById(R.id.lifeinsurance);
+        editTextOther = findViewById(R.id.other);
+
         editTextNetPay = findViewById(R.id.netpay);
         btnEmployeeDeductionSave = findViewById(R.id.btn_deduction_save);
-        btnDeduction_search=findViewById(R.id.btn_Search);
+//        btnDeduction_search=findViewById(R.id.btn_Search);
 
 
          service = RetrofitConnection.getRetrofitInstance().create(EmployeeService.class);
@@ -114,9 +123,12 @@ public class SalaryDeductionActivity extends AppCompatActivity {
 
                 String de_name = editTextDeductionName.getText().toString();
                 double grosssalary=employeeAllowances.getTs();
-                double mealcharge =grosssalary * (Double.parseDouble(editTextTax.getText().toString())/100);
+                double advance = Double.parseDouble(editTextAdvance.getText().toString());
                 double provident =grosssalary * (Double.parseDouble(editTextProvident.getText().toString())/100);
-                double netpay =grosssalary-mealcharge-provident;
+                double tax =grosssalary * (Double.parseDouble(editTextTax.getText().toString())/100);
+                double lifeinsurance =grosssalary * (Double.parseDouble(editTextInsurance.getText().toString())/100);
+                double other = Double.parseDouble(editTextOther.getText().toString());
+                double netpay = grosssalary-advance-provident-tax-lifeinsurance-other;
                 EmployeeService service = RetrofitConnection.getRetrofitInstance().create(EmployeeService.class);
                 EmployeeDeduction employeeDeduction=new EmployeeDeduction();
                 employeeDeduction.setFirstName(de_name);
@@ -125,8 +137,11 @@ public class SalaryDeductionActivity extends AppCompatActivity {
                 employeeDeduction.setDepartment(employeeAllowances.getDepartment());
                 employeeDeduction.setDesignation(employeeAllowances.getDesignation());
                 employeeDeduction.setGrossSalary(employeeAllowances.getTs());
-                employeeDeduction.setMealcharge(mealcharge);
-                employeeDeduction.setLifeinsurance(provident);
+                employeeDeduction.setAdvance(advance);
+                employeeDeduction.setContributionPf(provident);
+                employeeDeduction.setMealcharge(tax);
+                employeeDeduction.setLifeinsurance(lifeinsurance);
+                employeeDeduction.setOther(other);
                 employeeDeduction.setNetpay(netpay);
                 Call<EmployeeDeduction> call=service.saveNetSalary(employeeDeduction);
                 call.enqueue(new Callback<EmployeeDeduction>() {
